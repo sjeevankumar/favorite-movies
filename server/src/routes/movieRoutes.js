@@ -4,7 +4,7 @@ const router = express.Router()
 const {
     createMovie,
     getAllMovies,
-    getMovie,
+    getSingleMovie,
     updateMovie,
     deleteMovie
 } = require("../controllers/movieController")
@@ -16,7 +16,7 @@ router
 
 router
     .route("/:id")
-    .get(getMovie)
+    .get(getSingleMovie)
     .put(updateMovie)
     .delete(deleteMovie)
 
