@@ -5,12 +5,15 @@ const express = require('express')
 const app = express()
 
 // rest of the packages
+const cors = require('cors')
 
 // database
 const connectDB = require('./db/connect')
 
 // routers
 const movieRouter = require('./routes/movieRoutes')
+
+app.use(cors());
 
 app.use(express.json());
 
